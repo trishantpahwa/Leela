@@ -17,7 +17,7 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
-      env:
+        env:
           PORT: 50000
 
   publish-npm:
