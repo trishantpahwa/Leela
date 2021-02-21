@@ -26,6 +26,7 @@ describe('Test route', function () {
             const response = await testMaarg();
             assert.equal(response.status, 200);
             assert.equal(JSON.stringify({ middleware: 'testable-route', controller: 'testable-route' }), '{"middleware":"testable-route","controller":"testable-route"}');
+            Leela.server.close();
         });
     });
 });
