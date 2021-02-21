@@ -1,6 +1,6 @@
 {
-  "name": "leela",
-  "version": "1.0.0",
+  "name": "leelajs",
+  "version": "0.0.0",
   "description": "An Indian wrapper of ExpressJS, with a few tweeks.",
   "main": "src\\index.js",
   "scripts": {
