@@ -24,26 +24,28 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 app.start = function () {
-    app.listen(8080
-        // process.env.host, process.env.port
-        , function () {
-            const host = process.env.host + ':' + process.env.port;
-            const timestamp = new Date().toString();
-            const startMessage = 'pe leela aarambh hui';
-            // console.clear();
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).underline(host) + chalk.hex('000000').dim.bgWhite(' ' + timestamp + ' ') + chalk.underline.italic.bgGreen(startMessage));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
-            console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
-        });
+    if (process.env.host && process.env.port)
+        app.listen(
+            process.env.host, process.env.port
+            , function () {
+                const host = process.env.host + ':' + process.env.port;
+                const timestamp = new Date().toString();
+                const startMessage = 'pe leela aarambh hui';
+                console.clear();
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).underline(host) + chalk.hex('000000').dim.bgWhite(' ' + timestamp + ' ') + chalk.underline.italic.bgGreen(startMessage));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log(chalk.dim.bgHex(colors.orange).dim(' '.repeat(host.length)) + chalk.hex('000000').dim.bgWhite(' '.repeat(timestamp.length + 2)) + chalk.hex('000000').dim.bgGreen(' '.repeat(startMessage.length)));
+                console.log('\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n');
+            });
+    else console.log('Set host and port please.');
 }
 
 module.exports = {
