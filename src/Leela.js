@@ -24,11 +24,11 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 app.start = function () {
-    if (process.env.HOST && process.env.PORT)
+    if (process.env.PORT)
         app.listen(
-            process.env.HOST, process.env.PORT
+            process.env.PORT
             , function () {
-                const host = process.env.HOST + ':' + process.env.PORT;
+                const host = '0.0.0.0:' + process.env.PORT;
                 const timestamp = new Date().toString();
                 const startMessage = 'pe leela aarambh hui';
                 console.clear();
