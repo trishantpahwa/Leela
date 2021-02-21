@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 app.start = function () {
     if (process.env.PORT)
-        app.listen(
+        app.server = app.listen(
             process.env.PORT
             , function () {
                 const host = '0.0.0.0:' + process.env.PORT;
