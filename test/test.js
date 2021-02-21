@@ -17,7 +17,7 @@ Leela.use(maarg1);
 Leela.start();
 
 async function testMaarg() {
-    return await axios.get('http://localhost:8080/testable-route');
+    return await axios.get('http://localhost:50000/testable-route');
 }
 
 describe('Test route', function () {
