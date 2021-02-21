@@ -2,8 +2,7 @@ language: node_js
 node_js:
   - node
 env:
-  - HOST=127.0.0.1
-  - PORT=8080
+  - HOST=127.0.0.1 PORT=8080
 install:
   - npm i
 script:
