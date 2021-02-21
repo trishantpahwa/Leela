@@ -34,7 +34,7 @@ jobs:
       - run: npm publish
         env:
           PORT: 50000
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+          NPM_TOKEN: ${{secrets.NPM_TOKEN}}
 
   publish-gpr:
     needs: build
