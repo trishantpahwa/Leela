@@ -1,2 +1,2 @@
 # Leela
-An Indian wrapper of ExpressJS, with a few tweeks.
+An wrapper of ExpressJS, with a few tweeks and an India twist.
