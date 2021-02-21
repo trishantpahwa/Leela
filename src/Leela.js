@@ -24,7 +24,7 @@ app.use(bodyParser.json({ limit: '50mb' }));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 app.start = function () {
-    if (process.env.host && process.env.port)
+    if (process.env.HOST && process.env.PORT)
         app.listen(
             process.env.host, process.env.port
             , function () {
