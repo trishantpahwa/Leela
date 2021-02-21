@@ -26,9 +26,9 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 app.start = function () {
     if (process.env.HOST && process.env.PORT)
         app.listen(
-            process.env.host, process.env.port
+            process.env.HOST, process.env.PORT
             , function () {
-                const host = process.env.host + ':' + process.env.port;
+                const host = process.env.HOST + ':' + process.env.PORT;
                 const timestamp = new Date().toString();
                 const startMessage = 'pe leela aarambh hui';
                 console.clear();
