@@ -1,6 +1,18 @@
-const router = new require('express').Router();
+const express = require('express');
+const router = new express.Router();
 
+/**
+ * Routes handler.
+ * Maarg The class that manages the routes and methods.
+*/
 class Maarg {
+  /**
+   * Create new Maarg
+   * @param {string} raasta The HTTP method of the route.
+   * @param {string} aastha The path of the route.
+   * @param {string} dhyaan The list of middlewares used by ther route.
+   * @param {string} tapasya The list of controllers used by ther route.
+  */
   constructor(raasta, aastha, dhyaan = [], tapasya) {
     switch (raasta) {
       case 'ALL':

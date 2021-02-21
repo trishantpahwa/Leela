@@ -4,7 +4,8 @@
   "description": "An Indian wrapper of ExpressJS, with a few tweeks.",
   "main": "src\\index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "lint": "node_modules/.bin/eslint --fix \"./src/**/*.js\""
   },
   "keywords": [
     "Leela",
@@ -23,6 +24,8 @@
   },
   "devDependencies": {
     "axios": "^0.21.1",
+    "eslint": "^7.20.0",
+    "eslint-config-google": "^0.14.0",
     "mocha": "^8.3.0",
     "nodemon": "^2.0.7",
     "np": "^7.4.0"

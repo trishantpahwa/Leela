@@ -6,4 +6,5 @@ env:
 install:
   - npm i
 script:
+  - npm run lint
   - npm test
