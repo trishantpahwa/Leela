@@ -7,6 +7,10 @@
     "test": "mocha",
     "lint": "node_modules/.bin/eslint --fix \"./src/**/*.js\""
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trishantpahwa/Leela"
+  },
   "keywords": [
     "Leela",
     "ExpressWrapper",
