@@ -3,7 +3,7 @@ name: Release npm package - Leela
 on:
   push:
     branches:
-      - release
+      - main
 
 jobs:
   release:
