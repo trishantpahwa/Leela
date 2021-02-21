@@ -1,6 +1,6 @@
 {
   "name": "leela",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "An Indian wrapper of ExpressJS, with a few tweeks.",
   "main": "src\\index.js",
   "scripts": {
@@ -27,6 +27,7 @@
     "eslint": "^7.20.0",
     "eslint-config-google": "^0.14.0",
     "mocha": "^8.3.0",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "semantic-release": "^17.3.9"
   }
 }
